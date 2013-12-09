@@ -13,14 +13,28 @@
 </head>
 
 <body>
-
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){ $("#focus_top").hide();
+		$("#focus_down").click(function(){
+		$("#focus_down").hide(1000);
+		$("#focus_top").show(1000);
+		}),
+		$("#focus_top").click(function(){
+		$("#focus_top").hide(1000);
+		$("#focus_down").show(1000);
+		});
+	});
+	</script>
 	<header class="header">
 		<h1>
+			<a name="up"></a>
 			<a href="#" class="logo_wrap"><img src="images/logo.png"/></a>
 		</h1>
 	</header>
 	<div id="page_wrap">
-		<a href="#down" align="right" class="focus" >DoWn</a>	
+		<a href="#up" align="right" id="focus_top">UP</a>
+		<a href="#down" align="right" id="focus_down" >DoWn</a>
 		<div class="slider">
 			<img width="100%" src="images/aeroplane.png"/>
 		</div>
